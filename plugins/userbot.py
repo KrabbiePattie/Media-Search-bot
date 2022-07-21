@@ -33,7 +33,6 @@ async def index_files(bot, message):
                 async with user_bot:
                     for chat in chats:
 
-                        
                         async for user_message in user_bot.get_chat_history(chat):
                             try:
                                 message = await bot.get_messages(chat, user_message.id, replies=0)
@@ -41,7 +40,6 @@ async def index_files(bot, message):
                                 await asyncio.sleep(e.x)
                                 message = await bot.get_messages(chat, user_message.id, replies=0)
 
-                            
                             for file_type in ("document", "video", "audio"):
                                 media = getattr(message, file_type, None)
                                 if media is not None:
