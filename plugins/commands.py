@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
-from utils import Media, unpack_new_file_id
+from utils import Media
 
 logger = logging.getLogger(__name__)
 
@@ -90,7 +90,12 @@ async def delete(bot, message):
         await msg.edit('This is not supported file format')
         return
 
-    result = await Media.collection.delete_one({'file_name': media.file_name, 'file_size': media.file_size})
+    result = await Media.collection.delete_one({
+        'file_name': media.file_name,
+        'file_size': media.file_size,
+        'file_type': media.file_type,
+        'mime_type': media.mime_type
+    })
 
     if result.deleted_count:
         await msg.edit('File is successfully deleted from database')
