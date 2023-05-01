@@ -32,7 +32,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 default_start_msg = """
 **Hello Dear Subscriber, Welcome To MoboDroid Bot**
 
-**I'm A Simple Inline App Searching Bot Which Helps You To Search And Share Android Premium/Modded Applications From All Across Telegram.\n\nHit The Go Inline Button Or Call Me From Any Chat Just By Typing My Username. For Example `@MoboDroidBot Snaptube`  In The Text Field.\n\nNb: Make Sure The Name Of The Application You Are Looking For Is Correct Else Bot Cannot Index It While Searching.**
+**I'm A Simple Inline App Searching Bot Which Helps You To Search And Share Android Premium/Modded Applications From All Across Telegram.\n\nHit The Go Inline Button Or Call Me From Any Chat Just By Typing My Username. For Example HackDroidBot Snaptube`  In The Text Field.\n\nNb: Make Sure The Name Of The Application You Are Looking For Is Correct Else Bot Cannot Index It While Searching.**
 """
 
 START_MSG = environ.get('START_MSG', default_start_msg)
